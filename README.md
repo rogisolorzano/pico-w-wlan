@@ -28,7 +28,7 @@ These are the configuration options:
 | ssid | yes | None | The SSID |
 | password | yes | None | The password |
 | timeout | no | 30 | The amount of seconds to wait for the initial connection to be made |
-| retry_count | no | 3 | The amount of times to retry connecting. This is for the initial conection. After the initial connection has been made, we retry indefinitely until we are re-connected. |
+| retry_count | no | 3 | The amount of times to retry connecting. This is for the initial connection. After the initial connection has been made, we retry indefinitely until we are re-connected. |
 | debug | no | False | Whether to print helpful debug messages. |
 | wlan | no | network.WLAN(network.STA_IF) | Override the wlan interface used under the hood. |
 
