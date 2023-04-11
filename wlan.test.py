@@ -1,9 +1,9 @@
 from microtest import test, run, expect, mock_module, observe
 from mocks import MockNetwork, MockWlan
 import uasyncio
-network = MockNetwork()
-mock_module('network', network)
+mock_module('network', MockNetwork())
 from wlan import Wlan, TimeoutException, InvalidPasswordException, AccessPointUnreachableException, ConnectionFailedException, STAT_NO_IP
+import network
 
 @test
 async def it_should_activate_the_wlan_interface_on_connect():
