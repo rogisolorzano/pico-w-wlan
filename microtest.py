@@ -50,8 +50,8 @@ class Expect:
 
     try:
       await self.value()
-    except exception:
-      threw_expected = True
+    except Exception as caught_exception:
+      threw_expected = exception.__name__ == type(caught_exception).__name__
       pass
 
     if self._fails(not threw_expected):
